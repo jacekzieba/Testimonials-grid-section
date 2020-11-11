@@ -2,8 +2,10 @@
 
 $moderate-violet: hsl(263, 55%, 52%);
 $very-dark-grayish-blue: hsl(217, 19%, 35%);
-$very-dark-blackish-blue: hsl(219, 29%, 14%);
-$white: hsl(0, 0%, 100%);
+$very-dark-blackish-blue: hsla(219, 29%, 14%, .8);
+$very-dark-blackish-blue-transparent: hsla(219, 29%, 14%, .4);
+$white: hsla(0, 0%, 100%, .8);
+$white-transparent: hsla(210, 46%, 95%, .5);
 
 $light-gray: hsl(0, 0%, 81%);
 $light-grayish-blue: hsl(210, 46%, 95%);
@@ -39,5 +41,33 @@ body {
     font-family: $font-primary;
     font-size: 1.1rem;
     font-weight: 500;
-    line-height: 1.6;
+    background-color: $light-grayish-blue;
+}
+
+.container {
+    margin: 5rem 15rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    
+
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+        margin: 8rem 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.body {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: 500px) {
+        top: auto;
+        transform: none;
+    }
 }

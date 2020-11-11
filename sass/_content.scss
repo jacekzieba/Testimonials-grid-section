@@ -1,0 +1,139 @@
+.box {
+    border-radius: 8px;
+    display: block;
+    padding: 3rem;
+    box-shadow: 28px 27px 29px -20px rgba(0,0,0,0.4);
+
+    &__profile {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+
+    &__pic {
+        display: block;
+        border: 1px solid $white;
+        border-radius: 50%;
+        height: 2.5rem;
+        margin-right: 1.5rem;
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 1;
+    }
+
+    &__name {
+        &--light {
+            font-weight: 600;
+            color: $white;
+            display: block;
+            font-size: 1.1rem;
+
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &--dark {
+            font-weight: 600;
+            color: $very-dark-blackish-blue;
+            display: block;
+
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+        }
+    }
+
+    &__position {
+        &--light {
+            color: $white-transparent;
+            display: block;
+
+            grid-row: 2 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &--dark {
+            color: $very-dark-blackish-blue-transparent;
+            display: block;
+
+            grid-row: 2 / span 1;
+            grid-column: 2 / span 1;
+        }
+    }
+
+    &__heading {
+        &--light {
+            color: $white;
+            padding-top: 2rem;
+            font-size: 2rem;
+        }
+
+        &--dark {
+            color: $very-dark-blackish-blue;
+            padding-top: 2rem;
+            font-size: 2rem;
+        }
+    }
+
+    &__paragraph {
+        &--light {
+            color: $white-transparent;
+            padding-top: 2rem;
+            font-size: 1.35rem;
+        }
+
+        &--dark {
+            color: $very-dark-blackish-blue-transparent;
+            padding-top: 2rem;
+            font-size: 1.35rem;
+        }
+    }
+}
+
+.box-daniel {
+    background-color: $moderate-violet;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    position: relative;
+    display: block;
+    
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -4.7rem;
+        right: 9rem;
+        line-height: 1;
+        font-size: 40rem;
+        color: hsla(210, 46%, 95%, .3);
+        font-family: sans-serif;
+        z-index: 1;
+
+        @media only screen and (max-width: 500px) {
+            right: 1rem;
+        }
+    }
+}
+
+.box-jonathan {
+    background-color: $very-dark-grayish-blue;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.box-kira {
+    background-color: #ffffff;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.box-jeanette {
+    background-color: #ffffff;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.box-patrick {
+    background-color: hsla(219, 29%, 14%, 1);
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+}
